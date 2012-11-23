@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}404 Not Found{% endblock %}
+
+{% block content %}
+  <style>
+    h2.tagline {display:none}
+    #content {font-size:11pt;}
+    #content h3 {margin-top: 1em;}
+    #content p {margin:0}
+  </style>
+  <div id="content">
+    <h3>404 Not Found</h3>
+    <p>Sorry, we could not find the page you were looking for.</p>
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}
