@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}{{title|title}}{% endblock %}
+{% block content %}
+
+  <style>
+    h2.tagline {display:none}
+    #breadcrumb {margin-top:1em; padding-bottom:1em; margin-bottom:2em; border-bottom:1px dotted #ccc; font-size:12px; font-weight:bold;}
+  </style>
+  
+  <div id="content" class="wikihtml">
+    <p id="breadcrumb"><a href="/">Home</a> &gt; {{title|title}}</p>
+    {% autoescape off %}{{page.html}}{% endautoescape %}
+  </div>
+
+{% endblock %}
+
+{% block side %}
+  <ul id="side">
+    <li><a href="/attend"><img src="/static/images/next.png" width="231" height="41" /></a></li>
+  </ul>
+{% endblock %}
